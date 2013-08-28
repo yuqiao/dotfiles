@@ -67,3 +67,12 @@
 [submodule "_vim/bundle/c"]
 	path = _vim/bundle/c
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule "_vim/bundle/taglist"]
+	path = _vim/bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "_vim/bundle/VimClojure"]
+	path = _vim/bundle/VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "_vim/bundle/vimscala"]
+	path = _vim/bundle/vimscala
+	url = https://github.com/derekwyatt/vim-scala.git
