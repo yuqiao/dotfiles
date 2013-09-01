@@ -126,6 +126,60 @@ map <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
+
+" ==========================================================
+" Globol Settings 
+" ==========================================================
+" cursor
+set cursorcolumn
+hi cursorline ctermbg=lightblue
+hi cursorcolumn ctermbg=lightblue
+colorscheme desert
+
+""""""""""""""""""""""""""""""""""""""""""""
+" => status line
+""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2            " Always show statusline, even if only 1 window.
+function! CurDir()
+	let curdir = substitute(getcwd(), '/home/rongqiao.yurq/', "~/", "g" )
+	return curdir
+endfunction
+
+set statusline=
+set statusline+=%f "path to the file in the buffer, relative to current directory
+set statusline+=\ %h%1*%m%r%w%0* "flag
+set statusline+=\ [%{strlen(&ft)?&ft:'none'}, "filetype
+set statusline+=%{&encoding}, "encoding
+set statusline+=%{&fileformat}]
+set statusline+=\ CWD:%r%{CurDir()}%h
+set statusline+=\ Line:%l/%L
+set statusline+=\ Time:%{strftime(\"%m-%d\ %H:%M\")}
+
+"set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+
+""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""
+" => taglist
+""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Use_Right_Window=1 "Split to the right side
+"let Tlist_Use_Left_Window=1 "Split to the right side
+let Tlist_File_Fold_Auto_Close=1
+"let Tlist_File_Fold_Auto_Close = 0 "Do not close tags for other files
+let Tlist_Compart_Format = 1 "Show small meny
+let Tlist_Exist_OnlyWindow = 1 "If you are the last, kill yourself
+let Tlist_Enable_Fold_Column = 0 "Do not show folding tree
+let Tlist_Sort_Type = "name" "Order by Name
+
+"Automatically open the taglist window
+let Tlist_Auto_Open = 1
+let Tlist_WinWidth = 30
+
+"Which tags files CTR-] will search 
+set tags=./tags,./../tags,./../../tags,./**/tags,tags
+
+map <leader>t :Tlist<cr>
+
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
@@ -216,8 +270,6 @@ set showcmd                 " Show incomplete normal mode commands as I type.
 set report=0                " : commands always print changed line count.
 set shortmess+=a            " Use [+]/[RO]/[w] for modified/readonly/written.
 set ruler                   " Show some info, even without statuslines.
-set laststatus=2            " Always show statusline, even if only 1 window.
-set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
@@ -248,7 +300,7 @@ map <leader>p "+p
 nnoremap <leader>q :q<CR>
 
 " hide matches on <leader>space
-nnoremap <leader><space> :nohlsearch<cr>
+" nnoremap <leader><space> :nohlsearch<cr>
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
@@ -280,6 +332,9 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au FileType coffee setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+au BufNewFile,BufRead *.py map <buffer> <leader><space> :w!<cr>:!python %<cr>
+autocmd BufNewFile, *.py 0r ~/.vim/template/python.tpl
+
 " Don't let pyflakes use the quickfix window
 let g:pyflakes_use_quickfix = 0
 
@@ -305,5 +360,5 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 if exists("&colorcolumn")
-   set colorcolumn=79
+   au BufRead *.py set colorcolumn=79
 endif
