@@ -144,6 +144,10 @@ map <leader>r :RopeRename<CR>
 set cursorcolumn
 hi cursorline ctermbg=lightblue
 hi cursorcolumn ctermbg=lightblue
+
+set encoding=utf-8
+set fileencodings=utf-8,chinese,gbk,latin-1
+
 colorscheme desert
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -317,6 +321,11 @@ nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Select the item in the list with enter
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" ==========================================================
+" C/C++
+" ==========================================================
+command! Header call AddIfndefGuard()
 
 " ==========================================================
 " Javascript

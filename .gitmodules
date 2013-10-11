@@ -76,3 +76,9 @@
 [submodule "_vim/bundle/vimscala"]
 	path = _vim/bundle/vimscala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "_vim/bundle/a"]
+	path = _vim/bundle/a
+	url = https://github.com/vim-scripts/a.vim.git
+[submodule "_vim/bundle/AddIfndefGuard"]
+	path = _vim/bundle/AddIfndefGuard
+	url = https://github.com/vim-scripts/AddIfndefGuard.git
