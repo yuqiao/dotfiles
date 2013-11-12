@@ -190,11 +190,11 @@ let Tlist_Compart_Format = 1 "Show small meny
 let Tlist_Exist_OnlyWindow = 1 "If you are the last, kill yourself
 let Tlist_Enable_Fold_Column = 0 "Do not show folding tree
 let Tlist_Sort_Type = "name" "Order by Name
-let Tlist_Show_Menu = 1  "show on the left side.
+"let Tlist_Show_Menu = 1  "show on the left side.
 
 "Automatically open the taglist window
-let Tlist_Auto_Open = 1
-let Tlist_WinWidth = 30
+"let Tlist_Auto_Open = 1
+"let Tlist_WinWidth = 30
 
 "Which tags files CTR-] will search 
 set tags=./tags,./../tags,./../../tags,./**/tags,tags

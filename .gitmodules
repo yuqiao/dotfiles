@@ -91,3 +91,12 @@
 [submodule "_vim/bundle/cscope"]
 	path = _vim/bundle/cscope
 	url = https://github.com/vim-scripts/cscope.vim.git
+[submodule "_vim/bundle/supertab"]
+	path = _vim/bundle/supertab
+	url = https://github.com/vim-scripts/SuperTab-continued..git
+[submodule "_vim/bundle/omnicppcomplete"]
+	path = _vim/bundle/omnicppcomplete
+	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "_vim/bundle/code_complete"]
+	path = _vim/bundle/code_complete
+	url = https://github.com/mbbill/code_complete.git
