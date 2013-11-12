@@ -149,6 +149,8 @@ set encoding=utf-8
 set fileencodings=utf-8,chinese,gbk,latin-1
 
 colorscheme desert
+set guifont=Monaco:h13
+set wrap
 
 """"""""""""""""""""""""""""""""""""""""""""
 " => status line
@@ -176,6 +178,7 @@ set statusline+=\ Time:%{strftime(\"%m-%d\ %H:%M\")}
 """"""""""""""""""""""""""""""""""""""""""""
 " => taglist
 """"""""""""""""""""""""""""""""""""""""""""
+let Tlist_Show_One_File=1
 let Tlist_Use_Right_Window=1 "Split to the right side
 "let Tlist_Use_Left_Window=1 "Split to the right side
 let Tlist_File_Fold_Auto_Close=1
@@ -184,6 +187,7 @@ let Tlist_Compart_Format = 1 "Show small meny
 let Tlist_Exist_OnlyWindow = 1 "If you are the last, kill yourself
 let Tlist_Enable_Fold_Column = 0 "Do not show folding tree
 let Tlist_Sort_Type = "name" "Order by Name
+let Tlist_Show_Menu = 1  "show on the left side.
 
 "Automatically open the taglist window
 let Tlist_Auto_Open = 1
@@ -193,6 +197,35 @@ let Tlist_WinWidth = 30
 set tags=./tags,./../tags,./../../tags,./**/tags,tags
 
 map <leader>t :Tlist<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""
+" => winmanager
+""""""""""""""""""""""""""""""""""""""""""""
+"let g:winManagerWindowLayout = "BufExplorer,FileExplorer|TagList"
+let g:winManagerWindowLayout = "TagList|FileExplorer,BufExplorer"
+let g:winManagerWidth = 30 " winmanager width default is 25
+map <leader>m :WMToggle<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""
+" => cscope
+""""""""""""""""""""""""""""""""""""""""""""
+" s: Find this C symbol
+map <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+map <leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+map <leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+map <leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+map <leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+map <leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+" f: Find this file
+map <leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+map <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+map <leader>l :call ToggleLocationList()<CR>
 
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
@@ -248,7 +281,7 @@ set virtualedit=block       " Let cursor move past the last char in <C-v> mode
 set scrolloff=3             " Keep 3 context lines above and below the cursor
 set backspace=2             " Allow backspacing over autoindent, EOL, and BOL
 set showmatch               " Briefly jump to a paren once it's balanced
-set nowrap                  " don't wrap text
+"""set nowrap                  " don't wrap text
 set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
