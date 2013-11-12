@@ -141,6 +141,7 @@ map <leader>r :RopeRename<CR>
 " Globol Settings 
 " ==========================================================
 " cursor
+set fileformat=unix
 set cursorcolumn
 hi cursorline ctermbg=lightblue
 hi cursorcolumn ctermbg=lightblue
@@ -148,8 +149,10 @@ hi cursorcolumn ctermbg=lightblue
 set encoding=utf-8
 set fileencodings=utf-8,chinese,gbk,latin-1
 
+set hid "chang buffer without saving
+
 colorscheme desert
-set guifont=Monaco:h13
+"set guifont=Monaco:h13
 set wrap
 
 """"""""""""""""""""""""""""""""""""""""""""
