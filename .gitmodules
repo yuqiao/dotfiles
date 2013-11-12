@@ -88,9 +88,6 @@
 [submodule "_vim/bundle/bufexplorer"]
 	path = _vim/bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "_vim/bundle/minibufexpl"]
-	path = _vim/bundle/minibufexpl
-	url = https://github.com/vim-scripts/minibufexpl.vim.git
 [submodule "_vim/bundle/cscope"]
 	path = _vim/bundle/cscope
 	url = https://github.com/vim-scripts/cscope.vim.git

@@ -152,7 +152,7 @@ set fileencodings=utf-8,chinese,gbk,latin-1
 set hid "chang buffer without saving
 
 colorscheme desert
-"set guifont=Monaco:h13
+set guifont=Monaco:h13
 set wrap
 
 """"""""""""""""""""""""""""""""""""""""""""
@@ -205,9 +205,20 @@ map <leader>t :Tlist<cr>
 " => winmanager
 """"""""""""""""""""""""""""""""""""""""""""
 "let g:winManagerWindowLayout = "BufExplorer,FileExplorer|TagList"
-let g:winManagerWindowLayout = "TagList|FileExplorer,BufExplorer"
-let g:winManagerWidth = 30 " winmanager width default is 25
-map <leader>m :WMToggle<cr>
+"let g:winManagerWindowLayout = "TagList|FileExplorer,BufExplorer"
+"let g:winManagerWindowLayout = "NERDTree|TagList,BufExplorer"
+"let g:winManagerWidth = 30 " winmanager width default is 25
+"map <leader>m :WMToggle<cr>
+
+let g:NERDTree_title="[NERD Tree]" 
+let g:winManagerWindowLayout='NERDTree|TagList,BufExplorer'
+function! NERDTree_Start()
+    exec 'NERDTree'
+endfunction
+function! NERDTree_IsValid()
+    return 1
+endfunction
+nmap wm :if IsWinManagerVisible() <BAR> WMToggle<CR> <BAR> else <BAR> WMToggle<CR>:q<CR> endif <CR><CR>
 
 """"""""""""""""""""""""""""""""""""""""""""
 " => cscope
