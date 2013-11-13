@@ -367,7 +367,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " Select the item in the list with enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ==========================================================
 " C/C++
@@ -428,3 +428,18 @@ endif
 if exists("&colorcolumn")
    au BufRead *.py set colorcolumn=79
 endif
+
+" ===========================================================
+" Clojure
+" ============================================================
+
+" Default
+let g:clojure_fuzzy_indent = 1
+"let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let']
+let g:clojure_fuzzy_indent_blacklist = ['-fn$', '\v^with-%(meta|out-str|loading-context)$']
+
+" Legacy comma-delimited string version; the list format above is
+" recommended. Note that patterns are implicitly anchored with ^ and $.
+let g:clojure_fuzzy_indent_patterns = 'with.*,def.*,let.*'
+
+

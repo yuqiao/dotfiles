@@ -100,3 +100,9 @@
 [submodule "_vim/bundle/code_complete"]
 	path = _vim/bundle/code_complete
 	url = https://github.com/mbbill/code_complete.git
+[submodule "_vim/bundle/vim-clojure-static"]
+	path = _vim/bundle/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static.git
+[submodule "_vim/bundle/vim-classpath"]
+	path = _vim/bundle/vim-classpath
+	url = https://github.com/tpope/vim-classpath.git
