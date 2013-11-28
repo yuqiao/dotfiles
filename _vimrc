@@ -154,6 +154,7 @@ set hid "chang buffer without saving
 colorscheme desert
 set guifont=Monaco:h13
 set wrap
+set pastetoggle=<F3>
 
 """"""""""""""""""""""""""""""""""""""""""""
 " => status line
