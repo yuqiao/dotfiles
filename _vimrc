@@ -354,6 +354,7 @@ if has("gui_running")
 endif
 
 colorscheme molokai
+""" colorscheme solarized
 
 " Paste from clipboard
 map <leader>p "+p
