@@ -106,3 +106,6 @@
 [submodule "_vim/bundle/vim-classpath"]
 	path = _vim/bundle/vim-classpath
 	url = https://github.com/tpope/vim-classpath.git
+[submodule "_vim/bundle/gocode"]
+	path = _vim/bundle/gocode
+	url = https://github.com/Blackrush/vim-gocode
