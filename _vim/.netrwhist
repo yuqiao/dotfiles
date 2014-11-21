@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/sontek/.virtualenvs/notaliens3/src/notaliens.com/develop-eggs'
-let g:netrw_dirhist_2='/home/sontek/.config'
-let g:netrw_dirhist_3='/home/sontek/.virtualenvs/notaliens3/src/notaliens.com/develop-eggs'
-let g:netrw_dirhist_4='/home/sontek/.virtualenvs/notaliens3/src/notaliens.com/notaliens/notaliens/sites/views'
-let g:netrw_dirhist_5='/home/sontek/.virtualenvs/screenshot/src/build'
-let g:netrw_dirhist_6='/home/sontek/src/not-aliens-stack/roles'
-let g:netrw_dirhist_7='/Users/Qiao/projects/wangxin-documents/project'
-let g:netrw_dirhist_8='/Users/Qiao/Dropbox/git/EnjoyLife/technic/Experience'
-let g:netrw_dirhist_9='/Users/Qiao/repo/play.git'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/yuqiao/tmp/yuqiao.github.io/categories'
+let g:netrw_dirhist_2='/Users/yuqiao/tools/dotfiles/.git'
+let g:netrw_dirhist_3='/Users/yuqiao/Projects/wxtools/py/wxpy/tools/gen/templates/java/wwshop/biz/src/main/java/package/vo'
+let g:netrw_dirhist_4='/Users/yuqiao/Projects/wwserver/servers/hsf2icesrv'

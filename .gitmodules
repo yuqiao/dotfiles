@@ -112,3 +112,6 @@
 [submodule "_vim/bundle/gocode"]
 	path = _vim/bundle/gocode
 	url = https://github.com/Blackrush/vim-gocode
+[submodule "_vim/bundle/vimerl"]
+	path = _vim/bundle/vimerl
+	url = https://github.com/oscarh/vimerl.git
