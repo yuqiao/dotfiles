@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/yuqiao/tmp/yuqiao.github.io/categories'
-let g:netrw_dirhist_2='/Users/yuqiao/tools/dotfiles/.git'
-let g:netrw_dirhist_3='/Users/yuqiao/Projects/wxtools/py/wxpy/tools/gen/templates/java/wwshop/biz/src/main/java/package/vo'
-let g:netrw_dirhist_4='/Users/yuqiao/Projects/wwserver/servers/hsf2icesrv'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/yuqiao/Projects/wxtools/py/wxpy/client/readFlag'
+let g:netrw_dirhist_2='/Users/yuqiao/Projects/wangxin-documents/_book'
+let g:netrw_dirhist_3='/Users/yuqiao/Projects/wxtools/py/wxpy/wwitf/tests'
+let g:netrw_dirhist_4='/Users/yuqiao/Projects/wxtools/py/wxpy/wwitf/itf/protocal'
+let g:netrw_dirhist_5='/Users/yuqiao/Projects/wangxin-documents/project/readflag'
+let g:netrw_dirhist_6='/Users/yuqiao/Projects/wxorigsrv/Servers/IMCoreSrv'
