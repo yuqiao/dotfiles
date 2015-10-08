@@ -1,8 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/yuqiao/Projects/wxtools/py/wxpy/client/readFlag'
-let g:netrw_dirhist_2='/Users/yuqiao/Projects/wangxin-documents/_book'
-let g:netrw_dirhist_3='/Users/yuqiao/Projects/wxtools/py/wxpy/wwitf/tests'
-let g:netrw_dirhist_4='/Users/yuqiao/Projects/wxtools/py/wxpy/wwitf/itf/protocal'
-let g:netrw_dirhist_5='/Users/yuqiao/Projects/wangxin-documents/project/readflag'
-let g:netrw_dirhist_6='/Users/yuqiao/Projects/wxorigsrv/Servers/IMCoreSrv'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/yuqiao/Projects/dbaas-docs/mongo/demo/install'
+let g:netrw_dirhist_2='/Users/yuqiao/Projects/dbaas/mc_node/node'
+let g:netrw_dirhist_3='/Users/yuqiao/Projects/历史项目/wxtools/py/wxpy/test/ntfs'
