@@ -7,24 +7,12 @@
 [submodule "_vim/bundle/git"]
 	path = _vim/bundle/git
 	url = https://github.com/tpope/vim-git.git
-[submodule "_vim/bundle/pyflakes"]
-	path = _vim/bundle/pyflakes
-	url = https://github.com/mitechie/pyflakes-pathogen.git
 [submodule "_vim/bundle/ack"]
 	path = _vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
 [submodule "_vim/bundle/gundo"]
 	path = _vim/bundle/gundo
 	url = https://github.com/sjl/gundo.vim.git
-[submodule "_vim/bundle/pydoc"]
-	path = _vim/bundle/pydoc
-	url = https://github.com/fs111/pydoc.vim.git
-[submodule "_vim/bundle/pep8"]
-	path = _vim/bundle/pep8
-	url = https://github.com/vim-scripts/pep8.git
-[submodule "_vim/bundle/pytest"]
-	path = _vim/bundle/pytest
-	url = https://github.com/alfredodeza/pytest.vim.git
 [submodule "_vim/bundle/makegreen"]
 	path = _vim/bundle/makegreen
 	url = https://github.com/reinh/vim-makegreen
@@ -58,9 +46,6 @@
 [submodule "_vim/bundle/snippets"]
 	path = _vim/bundle/snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "_vim/bundle/coffee"]
-	path = _vim/bundle/coffee
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "_vim/bundle/ctrlp"]
 	path = _vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
@@ -70,12 +55,6 @@
 [submodule "_vim/bundle/taglist"]
 	path = _vim/bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule "_vim/bundle/VimClojure"]
-	path = _vim/bundle/VimClojure
-	url = https://github.com/vim-scripts/VimClojure.git
-[submodule "_vim/bundle/vimscala"]
-	path = _vim/bundle/vimscala
-	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "_vim/bundle/a"]
 	path = _vim/bundle/a
 	url = https://github.com/vim-scripts/a.vim.git
@@ -100,18 +79,6 @@
 [submodule "_vim/bundle/code_complete"]
 	path = _vim/bundle/code_complete
 	url = https://github.com/mbbill/code_complete.git
-[submodule "_vim/bundle/vim-clojure-static"]
-	path = _vim/bundle/vim-clojure-static
-	url = https://github.com/guns/vim-clojure-static.git
 [submodule "_vim/bundle/vim-classpath"]
 	path = _vim/bundle/vim-classpath
 	url = https://github.com/tpope/vim-classpath.git
-[submodule "_vim/bundle/vim-go"]
-	path = _vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go
-[submodule "_vim/bundle/gocode"]
-	path = _vim/bundle/gocode
-	url = https://github.com/Blackrush/vim-gocode
-[submodule "_vim/bundle/vimerl"]
-	path = _vim/bundle/vimerl
-	url = https://github.com/oscarh/vimerl.git
