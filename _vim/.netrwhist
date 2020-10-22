@@ -1,5 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/yuqiao/Projects/dbaas-docs/mongo/demo/install'
-let g:netrw_dirhist_2='/Users/yuqiao/Projects/dbaas/mc_node/node'
-let g:netrw_dirhist_3='/Users/yuqiao/Projects/历史项目/wxtools/py/wxpy/test/ntfs'
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/tmp'
+let g:netrw_dirhist_1='/Users/rongqiao.yurq/Projects/docker-tools-pgsql/image/pgsql/tool'

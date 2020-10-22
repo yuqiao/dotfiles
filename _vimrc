@@ -409,18 +409,19 @@ let g:pyflakes_use_quickfix = 0
 
 
 " Add the virtualenv's site-packages to vim path
-if has('python')
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
-endif
+"if has('python')
+"py << EOF
+"import os.path
+"import sys
+"import vim
+"if 'VIRTUAL_ENV' in os.environ:
+"    project_base_dir = os.environ['VIRTUAL_ENV']
+"    sys.path.insert(0, project_base_dir)
+"   # activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"   activate_this = os.path.join(project_base_dir, 'bin/activate')
+"    execfile(activate_this, dict(__file__=activate_this))
+"EOF
+"endif
 
 " Load up virtualenv's vimrc if it exists
 if filereadable($VIRTUAL_ENV . '/.vimrc')
@@ -444,4 +445,4 @@ let g:clojure_fuzzy_indent_blacklist = ['-fn$', '\v^with-%(meta|out-str|loading-
 " recommended. Note that patterns are implicitly anchored with ^ and $.
 let g:clojure_fuzzy_indent_patterns = 'with.*,def.*,let.*'
 
-
+let g:miniBufExplMaxSize = 2
