@@ -1,0 +1,147 @@
+# Ghostty 终端配置文件
+# 基于 Kitty 配置转换
+# 重新加载配置：Cmd + Shift + ,
+#
+#
+# tab 窗口相关
+macos-titlebar-style = hiddenjjj
+window-decoration = true
+# 确保没有禁用原生全屏
+macos-non-native-fullscreen = false
+
+# --- Theme and Colors ---
+theme = Catppuccin Mocha
+
+# ============================================================================
+# 字体配置
+# ============================================================================
+font-family = "Hack Nerd Font"
+font-family-bold = "Hack Nerd Font Bold"
+font-family-italic = "Hack Nerd Font Italic"
+font-family-bold-italic = "Hack Nerd Font Bold Italic"
+font-size = 14
+# 行高调整：增加 20% 的单元格高度
+# adjust-cell-height = 20%
+
+# ============================================================================
+# 窗口配置
+# ============================================================================
+# 初始窗口大小（字符数）
+window-width = 120
+window-height = 40
+
+# 内边距
+window-padding-x = 2
+window-padding-y = 2
+
+
+# 背景透明度和模糊
+background-opacity = 0.99
+background-blur = 48
+
+# 尝试开启非原生全屏
+macos-non-native-fullscreen = true
+
+# 指定背景图片的路径（建议使用绝对路径）
+background-image = /Users/qiaoyu/tools/lownagios.png
+
+# 设置背景图的透明度 (0.0 到 1.0)
+# 建议设置在 0.1 到 0.3 之间，这样既能看到图案又不会干扰代码文字
+background-image-opacity = 0.3
+
+# 开启背景模糊 (0 到 100)
+# 模糊处理能让背景图更有质感，减少图片细节对代码视觉的干扰
+# 注意：这需要较好的 GPU 性能支持
+background-blur-radius = 20
+
+# 修正后的字段名：设置为 cover 以填满窗口
+#background-image-mode = cover
+
+# ============================================================================
+# 标签栏配置
+# ============================================================================
+# 标签栏位置
+window-theme = auto
+
+# --- Cursor ---
+cursor-style = bar
+cursor-style-blink = true
+cursor-opacity = 0.8
+
+# --- Mouse ---
+mouse-hide-while-typing = true
+copy-on-select = clipboard
+
+
+# ============================================================================
+# 性能和其他配置
+# ============================================================================
+# 禁用铃声
+bell-features = no-system,no-audio,no-attention,no-title,no-border
+
+# 滚动缓冲区
+scrollback-limit = 100000
+
+# 选中即复制
+#copy-on-select = true
+
+# 剪贴板去除尾部空格
+clipboard-paste-protection = false
+
+# 链接检测
+link-url = true
+
+# ============================================================================
+# 快捷键配置 - macOS 风格（iTerm2 兼容）
+# ============================================================================
+
+# 新建标签页
+keybind = cmd+t=new_tab
+
+# 关闭标签页
+keybind = cmd+w=close_surface
+
+# 新建窗口
+keybind = cmd+n=new_window
+
+# 垂直分屏
+keybind = cmd+d=new_split:right
+
+# 水平分屏
+keybind = cmd+shift+d=new_split:down
+
+# 下一个标签页
+keybind = cmd+]=next_tab
+
+# 上一个标签页
+keybind = cmd+[=previous_tab
+
+# 快速切换 Tab (Cmd + 1..5)
+keybind = cmd+1=goto_tab:1
+keybind = cmd+2=goto_tab:2
+keybind = cmd+3=goto_tab:3
+keybind = cmd+4=goto_tab:4
+keybind = cmd+5=goto_tab:5
+
+# 全屏切换
+keybind = cmd+enter=toggle_fullscreen
+
+# 打开配置文件
+keybind = cmd+comma=open_config
+
+# 焦点切换
+keybind = cmd+alt+up=goto_split:up
+keybind = cmd+alt+down=goto_split:down
+keybind = cmd+alt+left=goto_split:left
+keybind = cmd+alt+right=goto_split:right
+
+# 调整窗口大小
+keybind = cmd+alt+shift+up=resize_split:up,20
+keybind = cmd+alt+shift+down=resize_split:down,20
+keybind = cmd+alt+shift+left=resize_split:left,20
+keybind = cmd+alt+shift+right=resize_split:right,20
+
+# 字体大小调整
+keybind = cmd+plus=increase_font_size:1
+keybind = cmd+minus=decrease_font_size:1
+keybind = cmd+0=reset_font_size

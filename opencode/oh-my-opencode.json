@@ -1,0 +1,22 @@
+{
+  "agents": {
+    "sisyphus": {
+      "model": "zhipu/GLM-4.7",
+      "description": "Sisyphus agent for general coding tasks"
+    },
+    "oracle": {
+      "model": "zhipu/GLM-4.7",
+      "description": "Oracle agent for analysis and insights"
+    },
+    "explore": {
+      "model": "zhipu/GLM-4.7",
+      "description": "Explore agent for code exploration"
+    },
+    "librarian": {
+      "model": "zhipu/GLM-4.7",
+      "description": "Librarian agent for documentation and knowledge"
+    }
+  },
+  "hooks": true,
+  "mcp": true
+}
