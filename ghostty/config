@@ -1,93 +1,59 @@
 # Ghostty 终端配置文件
-# 基于 Kitty 配置转换
-# 重新加载配置：Cmd + Shift + ,
 #
-#
-# tab 窗口相关
-macos-titlebar-style = hiddenjjj
-window-decoration = true
-# 确保没有禁用原生全屏
-macos-non-native-fullscreen = false
 
-# --- Theme and Colors ---
-theme = Catppuccin Mocha
+link-url = true
 
 # ============================================================================
 # 字体配置
 # ============================================================================
-font-family = "Hack Nerd Font"
-font-family-bold = "Hack Nerd Font Bold"
-font-family-italic = "Hack Nerd Font Italic"
-font-family-bold-italic = "Hack Nerd Font Bold Italic"
+font-family = Hack Nerd Font
 font-size = 14
-# 行高调整：增加 20% 的单元格高度
-# adjust-cell-height = 20%
+
+theme = "Catppuccin Mocha"
+#theme = light:Catppuccin Latte, dark:Catppuccin Mocha
 
 # ============================================================================
 # 窗口配置
 # ============================================================================
-# 初始窗口大小（字符数）
+
 window-width = 120
 window-height = 40
-
-# 内边距
 window-padding-x = 2
-window-padding-y = 2
+window-padding-y = 0
+window-theme = auto
 
-
-# 背景透明度和模糊
-background-opacity = 0.99
-background-blur = 48
-
-# 尝试开启非原生全屏
-macos-non-native-fullscreen = true
+#macos-titlebar-style = tabs
+macos-titlebar-style = hidden 
+background-opacity = 0.85
+background-blur-radius = 20
 
 # 指定背景图片的路径（建议使用绝对路径）
 background-image = /Users/qiaoyu/tools/lownagios.png
+background-image-fit = cover
+background-image-opacity = 0.35
 
-# 设置背景图的透明度 (0.0 到 1.0)
-# 建议设置在 0.1 到 0.3 之间，这样既能看到图案又不会干扰代码文字
-background-image-opacity = 0.3
+#background-blur-radius = 20
 
-# 开启背景模糊 (0 到 100)
-# 模糊处理能让背景图更有质感，减少图片细节对代码视觉的干扰
-# 注意：这需要较好的 GPU 性能支持
-background-blur-radius = 20
 
-# 修正后的字段名：设置为 cover 以填满窗口
-#background-image-mode = cover
+# ==========================================
+# 性能与滚动缓冲 (针对大模型开发优化)
+# ==========================================
+# LLM 开发经常遇到超长的 Log 和 Context 输出，调大历史记录限制
+#scrollback-limit = 1000000
+scrollback-limit = 50000000
 
-# ============================================================================
-# 标签栏配置
-# ============================================================================
-# 标签栏位置
-window-theme = auto
+# 允许鼠标平滑滚动
+mouse-scroll-multiplier = 2
 
-# --- Cursor ---
-cursor-style = bar
-cursor-style-blink = true
-cursor-opacity = 0.8
 
-# --- Mouse ---
-mouse-hide-while-typing = true
 copy-on-select = clipboard
+mouse-hide-while-typing = true
+clipboard-read = allow
+clipboard-write = allow
 
-
-# ============================================================================
-# 性能和其他配置
-# ============================================================================
-# 禁用铃声
-bell-features = no-system,no-audio,no-attention,no-title,no-border
-
-# 滚动缓冲区
-scrollback-limit = 100000
-
-# 选中即复制
-#copy-on-select = true
-
-# 剪贴板去除尾部空格
-clipboard-paste-protection = false
-
+# --- 桌面通知 ---
+# 让 Ghostty 在后台 AI 生成完成/报 Bell 时触发系统通知
+desktop-notifications = true
 # 链接检测
 link-url = true
 
@@ -145,3 +111,28 @@ keybind = cmd+alt+shift+right=resize_split:right,20
 keybind = cmd+plus=increase_font_size:1
 keybind = cmd+minus=decrease_font_size:1
 keybind = cmd+0=reset_font_size
+
+# ==========================================
+# 1. 启动命令：自动关联或创建 Tmux 会话
+# ==========================================
+# 每次打开 Ghostty 窗口时，自动尝试 attach 到名为 "dev" 的会话。
+# 如果 "dev" 不存在，则新建一个。
+# 这样即便你误关了 Ghostty 窗口，重新打开时一切都在原处。
+# command = /opt/homebrew/bin/tmux new-session -A -s dev
+#
+
+# --- 原生分屏快捷键配置 ---
+# --- 流派二：Tmux 象形风格 ---
+keybind = super+\=new_split:right
+keybind = super+-=new_split:down
+
+# 焦点切换
+keybind = super+left=goto_split:left
+keybind = super+right=goto_split:right
+keybind = super+up=goto_split:top
+keybind = super+down=goto_split:bottom
+
+# Cmd+W 保持系统默认（关 Tab/窗口）
+# Cmd+Shift+W 仅关闭当前分屏
+keybind = super+shift+w=close_surface
+
